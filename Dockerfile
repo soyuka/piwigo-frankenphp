@@ -44,5 +44,5 @@ COPY root/ /
 
 RUN cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 
-EXPOSE 8080
-VOLUME /config /gallery
+EXPOSE 80 443
+VOLUME /public/config  /public/language  /public/local  /public/plugins  /public/template-extension  /public/themes /gallery
