@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:1.4-php8.3-bookworm
+FROM dunglas/frankenphp:1.11.2-php8.5-bookworm
 
 WORKDIR /app
 
@@ -9,6 +9,7 @@ RUN install-php-extensions \
   pdo_mysql \
   mysqli \
   xml \
+  exif \
   zip \
 	opcache
 
@@ -45,4 +46,4 @@ COPY root/ /
 RUN cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 
 EXPOSE 80 443
-VOLUME /public/config  /public/language  /public/local  /public/plugins  /public/template-extension  /public/themes /gallery
+VOLUME /public/config /public/local /public/plugins /public/template-extension /public/themes /public/upload /public/galleries
