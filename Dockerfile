@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:1.13.4-php8.5-trixie
+FROM dunglas/frankenphp:1.13.5-php8.5-trixie
 
 ARG PIWIGO_RELEASE=16.4.0
 
